@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>도쿄 마라톤 2026 - 미디가마</title>
+    <title>미디가마 러닝</title>
     <style>
         * {
             margin: 0;
@@ -60,33 +60,6 @@
             font-weight: bold;
             color: #ffd700;
         }
-        .pace-card {
-            background: rgba(255,255,255,0.15);
-            border-radius: 20px;
-            padding: 30px;
-            margin-bottom: 30px;
-        }
-        .pace-chart {
-            display: flex;
-            align-items: flex-end;
-            height: 200px;
-            margin-top: 20px;
-            gap: 10px;
-        }
-        .pace-bar {
-            flex: 1;
-            background: linear-gradient(to top, #00f260, #0575e6);
-            border-radius: 8px 8px 0 0;
-            transition: all 0.3s;
-        }
-        .pace-bar:hover {
-            transform: scaleY(1.1);
-        }
-        .pace-label {
-            text-align: center;
-            font-size: 14px;
-            margin-top: 10px;
-        }
         .schedule-section {
             background: rgba(255,255,255,0.15);
             border-radius: 20px;
@@ -134,27 +107,6 @@
             font-size: 14px;
             color: #ffd700;
         }
-        .training-plan {
-            background: rgba(255,255,255,0.15);
-            border-radius: 20px;
-            padding: 30px;
-            margin-bottom: 30px;
-        }
-        .training-plan h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-        .training-item {
-            padding: 15px;
-            margin-bottom: 10px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 10px;
-        }
-        .training-week {
-            font-size: 20px;
-            font-weight: bold;
-            color: #ffd700;
-        }
         footer {
             text-align: center;
             padding: 20px;
@@ -166,146 +118,96 @@
 <body>
     <div class="container">
         <header>
-            <h1>🏃‍♂️ 도쿄 마라톤 2026</h1>
+            <h1>🏃‍♂️ 미디가마 러닝</h1>
             <p class="subtitle">미디가마의 러닝 여정</p>
         </header>
 
         <div class="stats-grid">
             <div class="stat-card">
-                <h2>📊 현재 기록</h2>
+                <h2>🏆 참가 기록</h2>
                 <div class="stat-item">
-                    <div>10km</div>
-                    <div class="stat-value">38분</div>
+                    <div>2026-03-01 도쿄 마라톤</div>
+                    <div class="stat-value">3:13:00</div>
                 </div>
                 <div class="stat-item">
-                    <div>하프 (21.097km)</div>
-                    <div class="stat-value">1:25:00</div>
+                    <div>2026-03-14 부곡 마라톤</div>
+                    <div class="stat-value">10km</div>
                 </div>
                 <div class="stat-item">
-                    <div>목표 시간</div>
-                    <div class="stat-value">2:58:00</div>
-                </div>
-            </div>
-
-            <div class="stat-card">
-                <h2>🎯 목표 달성 가능성</h2>
-                <div class="stat-item">
-                    <div>전체 가능성</div>
-                    <div class="stat-value">90%+</div>
-                </div>
-                <div class="stat-item">
-                    <div>페이스 차이</div>
-                    <div class="stat-value">6분 여유</div>
-                </div>
-                <div class="stat-item">
-                    <div>도쿄 마라톤</div>
-                    <div class="stat-value">2026-03-08</div>
+                    <div>2026-05-09 부산50K</div>
+                    <div class="stat-value">50km</div>
                 </div>
             </div>
 
             <div class="stat-card">
-                <h2>📍 주요 지점</h2>
-                <div class="stat-item">
-                    <div>시작</div>
-                    <div class="stat-value">09:00</div>
+                <h2>📅 일정 (2026)</h2>
+                <div class="schedule-item">
+                    <div class="schedule-date">2026-03-01</div>
+                    <div class="schedule-name">🏃 도쿄 마라톤 🏃</div>
                 </div>
-                <div class="stat-item">
-                    <div>하프 (21km)</div>
-                    <div class="stat-value">10:15</div>
+                <div class="schedule-item">
+                    <div class="schedule-date">2026-03-14</div>
+                    <div class="schedule-name">🏃 부곡 마라톤 (10KM) 🏃</div>
                 </div>
-                <div class="stat-item">
-                    <div>미야자키 대교</div>
-                    <div class="stat-value">미드웨이</div>
+                <div class="schedule-item">
+                    <div class="schedule-date">2026-03-21</div>
+                    <div class="schedule-name">🥾 남해트레일러닝 (자봉) 🥾</div>
                 </div>
-                <div class="stat-item">
-                    <div>종료</div>
-                    <div class="stat-value">~12:00</div>
+                <div class="schedule-item">
+                    <div class="schedule-date">2026-04-04</div>
+                    <div class="schedule-name">🥾 장수 트레일 러닝 🥾</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-date">2026-05-09</div>
+                    <div class="schedule-name">🏃 부산50K 🏃</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-date">2026-05-30</div>
+                    <div class="schedule-name">🏃 거제 트런 🏃</div>
                 </div>
             </div>
-        </div>
 
-        <div class="pace-card">
-            <h2>⏱️ 페이스 전략 (4분 초반 페이스)</h2>
-            <div class="pace-chart">
-                <div class="pace-bar" style="height: 40%;" title="0-10km: 4분/km"></div>
-                <div class="pace-bar" style="height: 40%;" title="10-21km: 4분/km"></div>
-                <div class="pace-bar" style="height: 35%;" title="21-30km: 4분 5초/km"></div>
-                <div class="pace-bar" style="height: 35%;" title="30-35km: 4분 5초/km"></div>
-                <div class="pace-bar" style="height: 35%;" title="35-42km: 가속 3.60분/km"></div>
-            </div>
-            <div class="pace-label">0-10km | 10-21km | 21-30km | 30-35km | 35-42km (가속)</div>
-        </div>
-
-        <div class="schedule-section">
-            <h2>📅 일정 (2026)</h2>
-            <div class="schedule-item">
-                <div class="schedule-date">2026-03-08</div>
-                <div class="schedule-name">🏃 도쿄 마라톤 🏃</div>
-            </div>
-            <div class="schedule-item">
-                <div class="schedule-date">2026-03-14</div>
-                <div class="schedule-name">🏃 부곡 마라톤 (10KM) 🏃</div>
-            </div>
-            <div class="schedule-item">
-                <div class="schedule-date">2026-03-21</div>
-                <div class="schedule-name">🥾 남해트레일러닝 (자봉) 🥾</div>
-            </div>
-            <div class="schedule-item">
-                <div class="schedule-date">2026-04-04</div>
-                <div class="schedule-name">🥾 장수 트레일 러닝 🥾</div>
-            </div>
-            <div class="schedule-item">
-                <div class="schedule-date">2026-05-09</div>
-                <div class="schedule-name">🏃 부산50K 🏃</div>
-            </div>
-            <div class="schedule-item">
-                <div class="schedule-date">2026-05-30</div>
-                <div class="schedule-name">🏃 거제 트런 🏃</div>
-            </div>
-        </div>
-
-        <div class="training-plan">
-            <h2>💪 훈련 계획</h2>
-            <div class="training-item">
-                <div class="training-week">🔥 2월 말 - 3월 1일 (도쿄 마라톤 주말)</div>
-                <div>• 하프 마라톤 속도 (4분/km) 반복 러닝<br>
-                   • 5km × 5세트 (4분/km 페이스)<br>
-                   • 휴식일: 일주일에 1-2회</div>
-            </div>
-            <div class="training-item">
-                <div class="training-week">🔥 3월 2일 - 3월 13일 (부곡 마라톤 전)</div>
-                <div>• 중장거리 러닝 증가: 10-15km<br>
-                   • 페이스 러닝: 8km @ 4분/km<br>
-                   • 인터벌 훈련: 400m × 10세트<br>
-                   • 휴식일: 하체 회복 (황금고사)</div>
-            </div>
-            <div class="training-item">
-                <div class="training-week">🔥 3월 14일 - 3월 20일 (남해트레일 러닝 전)</div>
-                <div>• 트레일 러닝 도입: 8-10km 이동폭<br>
-                   • 구배감: 2-3% 기울기<br>
-                   • 보폭: 140-150cm<br>
-                   • 휴식일: 스파핑 또는 마사지</div>
-            </div>
-            <div class="training-item">
-                <div class="training-week">🔥 3월 21일 - 3월 31일 (장수 트레일 러닝 전)</div>
-                <div>• 중거리 트레일: 15km<br>
-                   • 힐링 클릭: 50회 × 2세트<br>
-                   • 강도 조절: 3-4% 구배<br>
-                   • 다리 힘: 스쿼트 10회 × 3세트</div>
-            </div>
-            <div class="training-item">
-                <div class="training-week">🔥 4월 1일 - 5월 8일 (부산50K 전)</div>
-                <div>• 장거리 늘리기: 20-25km<br>
-                   • 하프 속도 유지: 4분/km<br>
-                   • 파워 훈련: 인터벌 800m × 6세트<br>
-                   • 휴식일: 완전 휴식</div>
-            </div>
-            <div class="training-item">
-                <div class="training-week">🔥 5월 9일 - 5월 29일 (거제 트런 전)</div>
-                <div>• 밸런스 러닝: 15-20km<br>
-                   • 변화폭 러닝: 평지 × 트레일 교차<br>
-                   • 최종 스파이크: 5km @ 3.75분/km<br>
-                   • 휴식일: 복구 러닝 5km</div>
+            <div class="stat-card">
+                <h2>💪 훈련 계획</h2>
+                <div class="training-item">
+                    <div class="training-week">🔥 2월 말 - 3월 1일 (도쿄 마라톤 주말)</div>
+                    <div>• 하프 마라톤 속도 반복 러닝<br>
+                       • 5km × 5세트<br>
+                       • 휴식일: 일주일에 1-2회</div>
+                </div>
+                <div class="training-item">
+                    <div class="training-week">🔥 3월 2일 - 3월 13일 (부곡 마라톤 전)</div>
+                    <div>• 중장거리 러닝 증가: 10-15km<br>
+                       • 페이스 러닝: 8km<br>
+                       • 인터벌 훈련: 400m × 10세트<br>
+                       • 휴식일: 하체 회복</div>
+                </div>
+                <div class="training-item">
+                    <div class="training-week">🔥 3월 14일 - 3월 20일 (남해트레일 러닝 전)</div>
+                    <div>• 트레일 러닝 도입: 8-10km<br>
+                       • 구배감: 2-3% 기울기<br>
+                       • 보폭: 140-150cm<br>
+                       • 휴식일: 스파핑 또는 마사지</div>
+                </div>
+                <div class="training-item">
+                    <div class="training-week">🔥 3월 21일 - 3월 31일 (장수 트레일 러닝 전)</div>
+                    <div>• 중거리 트레일: 15km<br>
+                       • 힐링 클릭: 50회 × 2세트<br>
+                       • 강도 조절: 3-4% 구배<br>
+                       • 다리 힘: 스쿼트 10회 × 3세트</div>
+                </div>
+                <div class="training-item">
+                    <div class="training-week">🔥 4월 1일 - 5월 8일 (부산50K 전)</div>
+                    <div>• 장거리 늘리기: 20-25km<br>
+                       • 파워 훈련: 인터벌 800m × 6세트<br>
+                       • 휴식일: 완전 휴식</div>
+                </div>
+                <div class="training-item">
+                    <div class="training-week">🔥 5월 9일 - 5월 29일 (거제 트런 전)</div>
+                    <div>• 밸런스 러닝: 15-20km<br>
+                       • 변화폭 러닝: 평지 × 트레일 교차<br>
+                       • 휴식일: 복구 러닝 5km</div>
+                </div>
             </div>
         </div>
 
@@ -323,7 +225,7 @@
 
         <footer>
             <p>made by 🦞 na-na (OpenClaw)</p>
-            <p>미디가마의 도쿄 마라톤 2026 준비 중</p>
+            <p>미디가마의 러닝 여정</p>
         </footer>
     </div>
 
@@ -335,7 +237,7 @@
             if (hours >= 6 && hours < 22) {
                 document.querySelector('.subtitle').textContent = `🏃‍♂️ 오늘 러닝: ${Math.floor(Math.random() * 10) + 5}km 완료!`;
             } else {
-                document.querySelector('.subtitle').textContent = '🏃‍♂️ 도쿄 마라톤 2026 - 미디가마의 러닝 여정';
+                document.querySelector('.subtitle').textContent = '🏃‍♂️ 미디가마 러닝 - 미디가마의 러닝 여정';
             }
         }, 1000);
     </script>
