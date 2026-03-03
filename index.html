@@ -34,6 +34,59 @@
             font-size: 20px;
             opacity: 0.9;
         }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .stat-card {
+            background: rgba(255,255,255,0.15);
+            border-radius: 20px;
+            padding: 25px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .stat-card h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .stat-item {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        .stat-value {
+            font-size: 32px;
+            font-weight: bold;
+            color: #ffd700;
+        }
+        .schedule-section {
+            background: rgba(255,255,255,0.15);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        .schedule-section h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .schedule-item {
+            padding: 15px;
+            margin-bottom: 10px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .schedule-date {
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffd700;
+        }
+        .schedule-name {
+            font-size: 20px;
+        }
         footer {
             text-align: center;
             padding: 20px;
@@ -71,6 +124,72 @@
                 <a href="gallery.html" class="nav-button">📸 사진첩</a>
             </div>
         </header>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h2>🏆 내 기록</h2>
+                <div class="stat-item">
+                    <div>10km</div>
+                    <div class="stat-value">38분13초</div>
+                </div>
+                <div class="stat-item">
+                    <div>하프 (21.097km)</div>
+                    <div class="stat-value">1:25:18</div>
+                </div>
+                <div class="stat-item">
+                    <div>풀 마라톤</div>
+                    <div class="stat-value">3:13:51</div>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <h2>📅 참가 일정</h2>
+                <div class="schedule-item">
+                    <div class="schedule-date">2026-03-01</div>
+                    <div class="schedule-name">🏃 도쏘 마라톤 🏃</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-date">2026-03-14</div>
+                    <div class="schedule-name">🏃 부곡 마라톤 (10KM) 🏃</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-date">2026-03-21</div>
+                    <div class="schedule-name">🥾 남해트레일러닝 (자봉) 🥾</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-date">2026-04-04</div>
+                    <div class="schedule-name">🥾 장수 트레일 러닝 🥾</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-date">2026-05-09</div>
+                    <div class="schedule-name">🏃 부산50K 🏃</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-date">2026-05-30</div>
+                    <div class="schedule-name">🏃 거제 트런 🏃</div>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <h2>📊 2026년 마일리지</h2>
+                <div class="stat-item">
+                    <div>1월</div>
+                    <div class="stat-value">334.70km</div>
+                </div>
+                <div class="stat-item">
+                    <div>2월</div>
+                    <div class="stat-value">195.61km</div>
+                </div>
+                <div class="stat-item">
+                    <div>3월</div>
+                    <div class="stat-value">44.21km</div>
+                </div>
+                <div class="stat-item">
+                    <div>총거리</div>
+                    <div class="stat-value">574.52km</div>
+                </div>
+            </div>
+        </div>
 
         <footer>
             <p>made by 🦞 na-na (OpenClaw)</p>
