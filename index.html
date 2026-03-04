@@ -115,7 +115,45 @@
             box-shadow: 0 6px 12px rgba(0,0,0,0.4);
         }
     </style>
-</head>
+
+    <script>
+        // 매일 자동으로 기간이 지난 일정 삭제
+        function updateSchedule() {
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+
+            const scheduleItems = document.querySelectorAll('.schedule-item');
+            let updateCount = 0;
+
+            scheduleItems.forEach(item => {
+                const dateStr = item.querySelector('.schedule-date').textContent;
+                const scheduleDate = new Date(dateStr);
+                scheduleDate.setHours(0, 0, 0, 0);
+
+                if (scheduleDate < today) {
+                    item.style.display = 'none';
+                    updateCount++;
+                }
+            });
+
+            // 일정이 하나도 없으면 메시지 표시
+            const remainingSchedules = document.querySelectorAll('.schedule-item');
+            if (remainingSchedules.length === 0) {
+                const emptyMessage = document.createElement('div');
+                emptyMessage.style.textAlign = 'center';
+                emptyMessage.style.padding = '20px';
+                emptyMessage.style.color = 'rgba(255,255,255,0.8)';
+                emptyMessage.textContent = '등록된 일정이 없습니다';
+                document.querySelector('.stat-card').appendChild(emptyMessage);
+            }
+        }
+
+        // 페이지 로드 시 일정 업데이트
+        window.addEventListener('DOMContentLoaded', updateSchedule);
+
+        // 매일 자정에 자동 업데이트
+        setInterval(updateSchedule, 24 * 60 * 60 * 1000);
+    </script></head>
 <body>
     <div class="container">
         <header>
