@@ -322,8 +322,8 @@
 
             if (currentRecord > 0) {
                 const recordDiff = targetRecord - currentRecord;
-                const recordRatio = Math.min(recordDiff / 60, 1); // 기록 차이 비율
-                probability += recordRatio * 30; // 기록 비율 기여도
+                const recordRatio = Math.min(recordDiff / targetRecord, 1); // 기록 비율
+                probability += recordRatio * 40; // 기록 비율 기여도 (더 크게)
             }
 
             const distanceRatio = Math.min(weeklyDistance / 50, 1); // 주간 거리 비율
