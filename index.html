@@ -95,9 +95,8 @@
             const stats = loadStats();
             const newMarch = (parseFloat(stats.currentMarch) + distance).toFixed(2);
             const newTotal = (parseFloat(stats.currentTotal) + distance).toFixed(2);
-            const newShoes = (parseFloat(stats.currentShoes) + distance).toFixed(2);
-            saveStats(newMarch, newTotal, newShoes);
-            updateDisplay(newMarch, newTotal, newShoes);
+            saveStats(newMarch, newTotal, stats.currentShoes);
+            updateDisplay(newMarch, newTotal, null);
             const successMessage = document.getElementById('successMessage');
             successMessage.textContent = `✅ ${distance}km 추가 완료!`;
             successMessage.classList.add('show');
