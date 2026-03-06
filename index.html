@@ -72,8 +72,10 @@
             localStorage.setItem('totalDistance', totalDistance);
         }
         function updateDisplay(marchDistance, totalDistance) {
-            document.querySelector('.stat-item:nth-child(3) .stat-value').textContent = marchDistance + 'km';
-            document.querySelector('.stat-item:nth-child(4) .stat-value').textContent = totalDistance + 'km';
+            const marchElement = document.getElementById('marchDistance');
+            const totalElement = document.getElementById('totalDistance');
+            if (marchElement) marchElement.textContent = marchDistance + 'km';
+            if (totalElement) totalElement.textContent = totalDistance + 'km';
         }
         function handleUpdate() {
             const input = document.getElementById('runDistance');
@@ -108,8 +110,8 @@
             <div class="stat-card">
                 <h2>🏆 내 기록</h2>
                 <div class="stat-item"><div>10km</div><div class="stat-value">38분13초</div></div>
-                <div class="stat-item"><div>하프 (21.097km)</div><div class="stat-value">1:25:18</div></div>
-                <div class="stat-item"><div>풀 마라톤</div><div class="stat-value">3:13:51</div></div>
+                <div class="stat-item"><div>하프 (21.097km)</div><div class="stat-value">1:25</div></div>
+                <div class="stat-item"><div>풀 마라톤</div><div class="stat-value">3:13</div></div>
             </div>
 
             <div class="stat-card">
