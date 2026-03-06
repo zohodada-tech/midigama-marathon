@@ -63,19 +63,23 @@
     </style>
     <script>
         function loadStats() {
-            const currentMarch = localStorage.getItem('marchDistance') || '50.21';
-            const currentTotal = localStorage.getItem('totalDistance') || '580.52';
-            return { currentMarch, currentTotal };
+            const currentMarch = localStorage.getItem('marchDistance') || '58.29';
+            const currentTotal = localStorage.getItem('totalDistance') || '588.73';
+            const currentShoes = localStorage.getItem('shoesDistance') || '6';
+            return { currentMarch, currentTotal, currentShoes };
         }
-        function saveStats(marchDistance, totalDistance) {
+        function saveStats(marchDistance, totalDistance, shoesDistance) {
             localStorage.setItem('marchDistance', marchDistance);
             localStorage.setItem('totalDistance', totalDistance);
+            localStorage.setItem('shoesDistance', shoesDistance);
         }
-        function updateDisplay(marchDistance, totalDistance) {
+        function updateDisplay(marchDistance, totalDistance, shoesDistance) {
             const marchElement = document.getElementById('marchDistance');
             const totalElement = document.getElementById('totalDistance');
+            const shoesElement = document.getElementById('shoesDistance');
             if (marchElement) marchElement.textContent = marchDistance + 'km';
             if (totalElement) totalElement.textContent = totalDistance + 'km';
+            if (shoesElement) shoesElement.textContent = shoesDistance + 'km';
         }
         function handleUpdate() {
             const input = document.getElementById('runDistance');
@@ -87,8 +91,9 @@
             const stats = loadStats();
             const newMarch = (parseFloat(stats.currentMarch) + distance).toFixed(2);
             const newTotal = (parseFloat(stats.currentTotal) + distance).toFixed(2);
-            saveStats(newMarch, newTotal);
-            updateDisplay(newMarch, newTotal);
+            const newShoes = (parseFloat(stats.currentShoes) + distance).toFixed(2);
+            saveStats(newMarch, newTotal, newShoes);
+            updateDisplay(newMarch, newTotal, newShoes);
             const successMessage = document.getElementById('successMessage');
             successMessage.textContent = `✅ ${distance}km 추가 완료!`;
             successMessage.classList.add('show');
@@ -97,7 +102,7 @@
         }
         window.addEventListener('DOMContentLoaded', function() {
             const stats = loadStats();
-            updateDisplay(stats.currentMarch, stats.currentTotal);
+            updateDisplay(stats.currentMarch, stats.currentTotal, stats.currentShoes);
         });
     </script>
 </head>
@@ -110,8 +115,8 @@
             <div class="stat-card">
                 <h2>🏆 내 기록</h2>
                 <div class="stat-item"><div>10km</div><div class="stat-value">38분13초</div></div>
-                <div class="stat-item"><div>하프 (21.097km)</div><div class="stat-value">1:25</div></div>
-                <div class="stat-item"><div>풀 마라톤</div><div class="stat-value">3:13</div></div>
+                <div class="stat-item"><div>하프 (21.097km)</div><div class="stat-value">1:25:18</div></div>
+                <div class="stat-item"><div>풀 마라톤</div><div class="stat-value">3:13:51</div></div>
             </div>
 
             <div class="stat-card">
@@ -128,8 +133,8 @@
                 <h2>📊 2026년 마일리지</h2>
                 <div class="stat-item"><div>1월</div><div class="stat-value">334.70km</div></div>
                 <div class="stat-item"><div>2월</div><div class="stat-value">195.61km</div></div>
-                <div class="stat-item"><div>3월</div><div class="stat-value" id="marchDistance">50.21km</div></div>
-                <div class="stat-item"><div>총거리</div><div class="stat-value" id="totalDistance">580.52km</div></div>
+                <div class="stat-item"><div>3월</div><div class="stat-value" id="marchDistance">58.29km</div></div>
+                <div class="stat-item"><div>총거리</div><div class="stat-value" id="totalDistance">588.73km</div></div>
             </div>
         </div>
 
@@ -146,7 +151,7 @@
         <div class="shoes-grid">
             <div class="shoes-card">
                 <div class="shoes-name">Adidas SL 2</div>
-                <div class="shoes-distance">6 km</div>
+                <div class="shoes-distance" id="shoesDistance">6 km</div>
             </div>
         </div>
 
