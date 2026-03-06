@@ -63,8 +63,8 @@
     </style>
     <script>
         function loadStats() {
-            const currentMarch = localStorage.getItem('marchDistance') || '50.21';
-            const currentTotal = localStorage.getItem('totalDistance') || '580.52';
+            const currentMarch = localStorage.getItem('marchDistance') || '58.29';
+            const currentTotal = localStorage.getItem('totalDistance') || '588.73';
             return { currentMarch, currentTotal };
         }
         function saveStats(marchDistance, totalDistance) {
@@ -110,8 +110,8 @@
             <div class="stat-card">
                 <h2>🏆 내 기록</h2>
                 <div class="stat-item"><div>10km</div><div class="stat-value">38분13초</div></div>
-                <div class="stat-item"><div>하프 (21.097km)</div><div class="stat-value">1:25</div></div>
-                <div class="stat-item"><div>풀 마라톤</div><div class="stat-value">3:13</div></div>
+                <div class="stat-item"><div>하프 (21.097km)</div><div class="stat-value">1:25:18</div></div>
+                <div class="stat-item"><div>풀 마라톤</div><div class="stat-value">3:13:51</div></div>
             </div>
 
             <div class="stat-card">
@@ -128,8 +128,8 @@
                 <h2>📊 2026년 마일리지</h2>
                 <div class="stat-item"><div>1월</div><div class="stat-value">334.70km</div></div>
                 <div class="stat-item"><div>2월</div><div class="stat-value">195.61km</div></div>
-                <div class="stat-item"><div>3월</div><div class="stat-value" id="marchDistance">50.21km</div></div>
-                <div class="stat-item"><div>총거리</div><div class="stat-value" id="totalDistance">580.52km</div></div>
+                <div class="stat-item"><div>3월</div><div class="stat-value" id="marchDistance">58.29km</div></div>
+                <div class="stat-item"><div>총거리</div><div class="stat-value" id="totalDistance">588.73km</div></div>
             </div>
         </div>
 
