@@ -43,13 +43,13 @@
         .stat-item { font-size: 16px; margin-bottom: 15px; }
         .stat-value { font-size: 32px; font-weight: bold; color: #ffd700; }
         .shoes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 30px; }
-        .shoes-card { background: rgba(255,255,255,0.15); border-radius: 20px; padding: 25px; text-align: center; position: relative; }
-        .shoes-name { font-size: 24px; font-weight: bold; margin-bottom: 10px; color: #4CAF50; }
-        .shoes-distance { font-size: 28px; font-weight: bold; color: #FFEB3B; margin-bottom: 15px; }
-        .shoes-mileage-input { position: absolute; bottom: 25px; right: 25px; }
-        .shoes-mileage-input input { padding: 8px; font-size: 14px; border: none; border-radius: 5px; min-width: 80px; }
-        .shoes-mileage-input button { padding: 8px 15px; font-size: 14px; font-weight: bold; color: white; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border: none; border-radius: 5px; cursor: button; margin-left: 5px; }
-        .shoes-mileage-input button:hover { transform: translateY(-2px); box-shadow: 0 6px 12px rgba(0,0,0,0.4); }
+        .shoes-card { background: rgba(255,255,255,0.15); border-radius: 20px; padding: 25px; text-align: center; }
+        .shoes-name { font-size: 24px; font-weight: bold; margin-bottom: 15px; color: #4CAF50; }
+        .shoes-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+        .shoes-distance { font-size: 28px; font-weight: bold; color: #FFEB3B; }
+        .shoes-mileage-input { display: flex; gap: 5px; }
+        .shoes-mileage-input input { padding: 5px 10px; font-size: 14px; border: none; border-radius: 5px; width: 60px; }
+        .shoes-mileage-input button { padding: 5px 10px; font-size: 14px; font-weight: bold; color: white; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border: none; border-radius: 5px; cursor: button; white-space: nowrap; }
         .schedule-section { background: rgba(255,255,255,0.15); border-radius: 20px; padding: 25px; margin-bottom: 30px; }
         .schedule-section h2 { font-size: 24px; margin-bottom: 20px; }
         .schedule-item { padding: 15px; margin-bottom: 10px; background: rgba(255,255,255,0.1); border-radius: 10px; display: flex; justify-content: space-between; }
@@ -172,10 +172,12 @@
         <div class="shoes-grid">
             <div class="shoes-card">
                 <div class="shoes-name">Adidas SL 2</div>
-                <div class="shoes-distance" id="shoesDistance">6 km</div>
-                <div class="shoes-mileage-input">
-                    <input type="number" id="shoesDistanceInput" placeholder="km" step="0.01">
-                    <button onclick="handleShoesUpdate()">+ 추가</button>
+                <div class="shoes-row">
+                    <div class="shoes-distance" id="shoesDistance">6 km</div>
+                    <div class="shoes-mileage-input">
+                        <input type="number" id="shoesDistanceInput" placeholder="km" step="0.01">
+                        <button onclick="handleShoesUpdate()">추가</button>
+                    </div>
                 </div>
                 <p id="shoesSuccessMessage" class="success-message"></p>
             </div>
